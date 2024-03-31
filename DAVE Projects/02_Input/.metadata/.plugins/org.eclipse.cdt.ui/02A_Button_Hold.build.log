@@ -1,0 +1,11 @@
+02:46:08 **** Incremental Build of configuration Debug for project 02A_Button_Hold ****
+"\"C:\\Infineon\\Tools\\DAVE IDE\\4.5.0.202105191637\\eclipse\\ARM-GCC-49\\bin\\make\"" --output-sync -j8 all 
+'Invoking: ARM-GCC Print Size'
+"C:/Infineon/Tools/DAVE IDE/4.5.0.202105191637/eclipse/ARM-GCC-49/bin/arm-none-eabi-size" --format=berkeley "02A_Button_Hold.elf"
+   text	   data	    bss	    dec	    hex	filename
+   8156	     56	   2096	  10308	   2844	02A_Button_Hold.elf
+'Finished building: 02A_Button_Hold.siz'
+
+
+02:46:09 Build Finished (took 411ms)
+

@@ -1,0 +1,3 @@
+DEVICE_DESC=Package\= LQFP64  \nROM\= 256 KB Flash  \nRAM\= 40 KB RAM  \nInOut\= 35 digital I/O  \nADC\= 9 ADC Channels, 12-bit  \nDAC\= 2 DAC Channels, 12 bit  \nTimed_InOut\= 14 Timer, 24 CAPCOM channels, 1 POSIF, 4 High Resolution PWM Channels  \nSerial\= 4 USIC channels, USB, CAN  \nDMA\= 8 DMA channels, USB DMA   \nTouch\= Touch and LED matrix control  \n
+USED_DAVE_VERSIONS=4.4.2
+eclipse.preferences.version=1

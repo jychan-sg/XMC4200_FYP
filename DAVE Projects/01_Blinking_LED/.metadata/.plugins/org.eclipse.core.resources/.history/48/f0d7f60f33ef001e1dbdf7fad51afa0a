@@ -1,0 +1,62 @@
+/*
+ * Demonstrates use of TIMER APP to vary timer interval and toggling of LED
+ * LED toggles at 0.1s interval for 5s before toggling at 0.5s interval. This sequence is repeated in a loop.
+ * TIMER_0 - Vary the time tick interval
+ * INTERRUPT_0 - Interrupt for timer event
+ * LED1 (DIGITIAL_IO) - I/O Connection for LED
+ */
+
+#include "DAVE.h"                 //Declarations from DAVE Code Generation (includes SFR declaration)
+#include "xmc_ccu4.h"
+
+#define TIMER_1S 1000000*100U // Base unit in ms , scaling by x100
+#define TIMER_100MS 100000*100U
+#define TIMER_10MS 10000*100U
+#define TIMER_5MS 5000*100U
+#define TIMER_1MS 1000*100U
+volatile uint32_t timetick_count = 0; // Global variable (unsigned-int 32bit) for time tick count
+
+int main(void)
+{
+  DAVE_STATUS_t status;
+  status = DAVE_Init();           /* Initialization of DAVE APPs  */
+  if (status != DAVE_STATUS_SUCCESS)
+  {
+    /* Placeholder for error handler code. The while loop below can be replaced with an user error handler. */
+    XMC_DEBUG("DAVE APPs initialization failed\n");
+    while(1U)
+    {
+    }
+  }
+
+  /* Placeholder for user application code. The while loop below can be replaced with user application code. */
+
+	  while(1U)
+	  {
+		  //TIMER_SetTimeInterval(&TIMER , TIMER_1S);
+	  }
+	  return 1;
+}
+
+void interval_handler(void)
+{
+	//TIMER_ClearEvent(&TIMER);
+	//DIGITAL_IO_ToggleOutput(&LED1);
+	//TIMER_Stop(&TIMER);
+	//TIMER_SetTimeInterval(&TIMER , TIMER_100MS); // Toggling interval of 1s
+	//TIMER_Start(&TIMER);
+
+	TIMER_ClearEvent(&TIMER);
+	TIMER_SetTimeInterval(&TIMER , TIMER_10MS);
+	TIMER_Stop(&TIMER);
+	if(timetick_count == 10)
+	{
+		DIGITAL_IO_ToggleOutput(&LED1);
+		timetick_count = 0;
+	}
+	else
+	{
+		timetick_count++;
+	}
+	TIMER_Start(&TIMER);
+}

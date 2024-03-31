@@ -1,0 +1,6 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:01_blinking_LED Debug,org.eclipse.launchbar.core.descriptorType.default\:01X_Blinking_Interval Debug,org.eclipse.launchbar.core.descriptorType.default\:01X_Blinking_Timer Debug,org.eclipse.launchbar.core.descriptorType.default\:01X_Blinking_Timer2 Debug,org.eclipse.launchbar.core.descriptorType.default\:01X_Blinking_BaseTimer Debug,org.eclipse.launchbar.core.descriptorType.default\:01A_Blinking_BaseTimer Debug
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:01_blinking_LED\ Debug/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:01_blinking_LED\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
